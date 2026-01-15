@@ -1,155 +1,249 @@
+/* --- Auth Modal Styles --- */
+.auth-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(34,36,60,0.92);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-modal-content {
+  background: #23234a;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(162, 89, 255, 0.18);
+  padding: 32px 28px 24px 28px;
+  min-width: 320px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.auth-modal-content h2 {
+  margin: 0 0 18px 0;
+  color: #a259ff;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+#auth-choice {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+#auth-choice button {
+  background: linear-gradient(90deg, #a259ff 0%, #3a7bd5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 22px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#auth-choice button:hover {
+  background: linear-gradient(90deg, #3a7bd5 0%, #a259ff 100%);
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.auth-form input {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #353570;
+  color: #fff;
+  font-size: 1em;
+  outline: none;
+}
+.auth-form button {
+  background: linear-gradient(90deg, #a259ff 0%, #3a7bd5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.2s;
+}
+.auth-form button:hover {
+  background: linear-gradient(90deg, #3a7bd5 0%, #a259ff 100%);
+}
+.auth-switch {
+  text-align: center;
+  font-size: 0.95em;
+  color: #aaa;
+}
+.auth-switch a {
+  color: #a259ff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.auth-error {
+  color: #ff6b6b;
+  font-size: 1em;
+  margin-top: 6px;
+  min-height: 1.2em;
+  text-align: center;
+}
 body {
-	background: #2d2e4a;
-	color: #fff;
-	font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-	margin: 0;
-	min-height: 100vh;
+  background: #2d2e4a;
+  color: #fff;
+  font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
 }
 
 .wallet-container {
-	max-width: 400px;
-	margin: 40px auto;
-	padding: 24px 12px 32px 12px;
-	background: rgba(34, 36, 60, 0.95);
-	border-radius: 24px;
-	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-	position: relative;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px 12px 32px 12px;
+  background: rgba(34, 36, 60, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  position: relative;
 }
 
 h1 {
-	text-align: center;
-	font-weight: 700;
-	margin-bottom: 24px;
-	letter-spacing: 1px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
 }
 
 .card-section {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
 }
 
 .wallet-card {
-	background: linear-gradient(135deg, #a259ff 0%, #3a7bd5 100%);
-	color: #fff;
-	border-radius: 20px;
-	box-shadow: 0 4px 24px rgba(162, 89, 255, 0.25);
-	width: 320px;
-	height: 180px;
-	padding: 24px 28px 18px 28px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	position: relative;
+  background: linear-gradient(135deg, #a259ff 0%, #3a7bd5 100%);
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(162, 89, 255, 0.25);
+  width: 320px;
+  height: 180px;
+  padding: 24px 28px 18px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
 .card-chip {
-	width: 40px;
-	height: 28px;
-	background: linear-gradient(90deg, #fff 60%, #e0c3fc 100%);
-	border-radius: 8px;
-	margin-bottom: 12px;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  width: 40px;
+  height: 28px;
+  background: linear-gradient(90deg, #fff 60%, #e0c3fc 100%);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .card-balance-label {
-	font-size: 0.95em;
-	opacity: 0.8;
+  font-size: 0.95em;
+  opacity: 0.8;
 }
 .card-balance {
-	font-size: 2.1em;
-	font-weight: 600;
-	margin: 4px 0 8px 0;
-	letter-spacing: 1px;
+  font-size: 2.1em;
+  font-weight: 600;
+  margin: 4px 0 8px 0;
+  letter-spacing: 1px;
 }
 .card-number {
-	font-size: 1.1em;
-	letter-spacing: 2px;
-	opacity: 0.85;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  opacity: 0.85;
 }
 .card-owner {
-	font-size: 1em;
-	opacity: 0.8;
-	margin-top: 2px;
+  font-size: 1em;
+  opacity: 0.8;
+  margin-top: 2px;
 }
 
 .actions-section {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-	margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
 }
 
 .wallet-form {
-	display: flex;
-	gap: 10px;
-	background: #23234a;
-	border-radius: 12px;
-	padding: 10px 12px;
-	box-shadow: 0 2px 8px rgba(34,36,60,0.12);
+  display: flex;
+  gap: 10px;
+  background: #23234a;
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 2px 8px rgba(34, 36, 60, 0.12);
 }
 .wallet-form input {
-	flex: 1;
-	padding: 8px 10px;
-	border: none;
-	border-radius: 8px;
-	background: #353570;
-	color: #fff;
-	font-size: 1em;
-	outline: none;
+  flex: 1;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+  background: #353570;
+  color: #fff;
+  font-size: 1em;
+  outline: none;
 }
 .wallet-form button {
-	background: linear-gradient(90deg, #a259ff 0%, #3a7bd5 100%);
-	color: #fff;
-	border: none;
-	border-radius: 8px;
-	padding: 8px 18px;
-	font-weight: 600;
-	font-size: 1em;
-	cursor: pointer;
-	transition: background 0.2s;
+  background: linear-gradient(90deg, #a259ff 0%, #3a7bd5 100%);
+  color: #fff;  
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 .wallet-form button:hover {
-	background: linear-gradient(90deg, #3a7bd5 0%, #a259ff 100%);
+  background: linear-gradient(90deg, #3a7bd5 0%, #a259ff 100%);
 }
 
 .history-section {
-	background: #23234a;
-	border-radius: 16px;
-	padding: 16px 12px 10px 12px;
-	box-shadow: 0 2px 8px rgba(34,36,60,0.10);
+  background: #23234a;
+  border-radius: 16px;
+  padding: 16px 12px 10px 12px;
+  box-shadow: 0 2px 8px rgba(34, 36, 60, 0.1);
 }
 .history-section h2 {
-	margin: 0 0 10px 0;
-	font-size: 1.1em;
-	font-weight: 600;
-	color: #a259ff;
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #a259ff;
 }
 .history-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	max-height: 160px;
-	overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 160px;
+  overflow-y: auto;
 }
 .history-list li {
-	padding: 8px 0;
-	border-bottom: 1px solid #353570;
-	font-size: 1em;
-	color: #fff;
+  padding: 8px 0;
+  border-bottom: 1px solid #353570;
+  font-size: 1em;
+  color: #fff;
 }
 .history-list li:last-child {
-	border-bottom: none;
+  border-bottom: none;
 }
 
 @media (max-width: 500px) {
-	.wallet-container {
-		max-width: 98vw;
-		padding: 8px 2vw 16px 2vw;
-	}
-	.wallet-card {
-		width: 95vw;
-		min-width: 0;
-		padding: 16px 10px 12px 10px;
-	}
+  .wallet-container {
+    max-width: 98vw;
+    padding: 8px 2vw 16px 2vw;
+  }
+  .wallet-card {
+    width: 95vw;
+    min-width: 0;
+    padding: 16px 10px 12px 10px;
+  }
 }

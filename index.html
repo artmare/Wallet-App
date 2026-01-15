@@ -8,7 +8,30 @@
 </head>
 <body>
 </body>
-    <div class="wallet-container">
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-modal-content">
+            <h2 id="auth-title">Welcome</h2>
+            <div id="auth-choice">
+                <button id="show-login">Login</button>
+                <button id="show-register">Register</button>
+            </div>
+            <form id="login-form" class="auth-form" style="display:none;">
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <div class="auth-switch">No account? <a href="#" id="to-register">Register</a></div>
+            </form>
+            <form id="register-form" class="auth-form" style="display:none;">
+                <input type="text" id="register-username" placeholder="Username" required>
+                <input type="password" id="register-password" placeholder="Password" required>
+                <button type="submit">Register</button>
+                <div class="auth-switch">Have an account? <a href="#" id="to-login">Login</a></div>
+            </form>
+            <div id="auth-error" class="auth-error"></div>
+        </div>
+    </div>
+
+    <div class="wallet-container" style="display:none;">
         <h1>My Wallet</h1>
         <div class="card-section">
             <div class="wallet-card">
@@ -16,7 +39,7 @@
                 <div class="card-balance-label">Balance</div>
                 <div class="card-balance" id="balance">$0.00</div>
                 <div class="card-number">**** **** **** 1234</div>
-                <div class="card-owner">Your Name</div>
+                <div class="card-owner" id="card-owner">Your Name</div>
             </div>
         </div>
         <div class="actions-section">
