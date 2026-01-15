@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artmare wallet</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+</body>
+    <div class="wallet-container">
+        <h1>My Wallet</h1>
+        <div class="card-section">
+            <div class="wallet-card">
+                <div class="card-chip"></div>
+                <div class="card-balance-label">Balance</div>
+                <div class="card-balance" id="balance">$0.00</div>
+                <div class="card-number">**** **** **** 1234</div>
+                <div class="card-owner">Your Name</div>
+            </div>
+        </div>
+        <div class="actions-section">
+            <form id="deposit-form" class="wallet-form">
+                <input type="number" min="0.01" step="0.01" placeholder="Deposit amount" required>
+                <button type="submit">Deposit</button>
+            </form>
+            <form id="withdraw-form" class="wallet-form">
+                <input type="number" min="0.01" step="0.01" placeholder="Withdraw amount" required>
+                <button type="submit">Withdraw</button>
+            </form>
+            <form id="send-form" class="wallet-form">
+                <input type="text" placeholder="Recipient" required>
+                <input type="number" min="0.01" step="0.01" placeholder="Send amount" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="history-section">
+            <h2>Transaction History</h2>
+            <ul id="history-list" class="history-list">
+                <!-- Transactions will appear here -->
+            </ul>
+        </div>
+    </div>
+    <script src="wallet.js"></script>
+</body>
+</html>
